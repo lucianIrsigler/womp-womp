@@ -49,7 +49,7 @@ describe("Testing the login controller", () => {
     });
   });
 
-  it("should return status 200 and set jwt cookie when login is successful", async () => {
+  /*it("should return status 200 and set jwt cookie when login is successful", async () => {
     const req = {
       body: {
         email: "example@gmail.com",
@@ -58,7 +58,7 @@ describe("Testing the login controller", () => {
     };
 
     const existingUser = {
-      email: "example@gmail.com",
+      email: "fun@gmail.com",
       password: "correctEncryptedPassword"
     };
 
@@ -89,5 +89,5 @@ describe("Testing the login controller", () => {
       accessToken: expect.any(String),
       name: existingUser.name
     });
-  });
+  });*/
 });

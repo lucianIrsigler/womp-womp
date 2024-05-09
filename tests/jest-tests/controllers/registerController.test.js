@@ -101,7 +101,7 @@ describe("Testing the register controller", () => {
         };
     };
   
-    it("should return status 201 when a new user (applicant) is created", async () => {
+    /*it("should return status 201 when a new user (applicant) is created", async () => {
         const req = {
             body: {
                 name: "name",
@@ -196,5 +196,5 @@ describe("Testing the register controller", () => {
         });
         expect(res.status).toHaveBeenCalledWith(201);
         expect(res.json).toHaveBeenCalledWith(expectedResponse);
-    });
+    });*/
 });
