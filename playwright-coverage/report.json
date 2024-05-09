@@ -1,0 +1,609 @@
+{
+    "name": "My Test Report",
+    "date": 1714682079766,
+    "dateH": "5/2/2024, 10:34:39 PM",
+    "duration": 7595,
+    "durationH": "7.6s",
+    "cwd": "/home/lucian/Documents/uni/SD/Funding-Website",
+    "outputFile": "/home/lucian/Documents/uni/SD/Funding-Website/playwright-coverage/report.html",
+    "outputDir": "/home/lucian/Documents/uni/SD/Funding-Website/playwright-coverage",
+    "metadata": {
+        "actualWorkers": 1
+    },
+    "system": {
+        "cpu": {
+            "color": "#117DBB",
+            "count": 12,
+            "model": "AMD Ryzen 5 5500U with Radeon Graphics",
+            "speed": 1397
+        },
+        "mem": {
+            "color": "#8B12AE",
+            "total": 16047239168
+        },
+        "arch": "x64",
+        "platform": "linux",
+        "release": "6.8.6-200.fc39.x86_64",
+        "type": "Linux",
+        "version": "#1 SMP PREEMPT_DYNAMIC Sat Apr 13 15:14:23 UTC 2024",
+        "uptime": 44678.14,
+        "hostname": "fedora",
+        "pid": 77429,
+        "node": "18.0.0",
+        "v8": "10.1.124.8-node.13",
+        "timestampStart": 1714682079766,
+        "ticks": [
+            {
+                "cpu": {
+                    "percent": 8.59
+                },
+                "mem": {
+                    "free": 7539302400
+                },
+                "timestamp": 1714682081769
+            },
+            {
+                "cpu": {
+                    "percent": 4.62
+                },
+                "mem": {
+                    "free": 7533035520
+                },
+                "timestamp": 1714682083771
+            },
+            {
+                "cpu": {
+                    "percent": 4.94
+                },
+                "mem": {
+                    "free": 7547858944
+                },
+                "timestamp": 1714682085775
+            },
+            {
+                "cpu": {
+                    "percent": 2.27
+                },
+                "mem": {
+                    "free": 7750053888
+                },
+                "timestamp": 1714682087361
+            }
+        ],
+        "workers": 6,
+        "jobs": [
+            {
+                "caseId": "e60263e564ff936bd4c9",
+                "parallelIndex": 0,
+                "workerIndex": 8,
+                "timestamp": 1714682080566,
+                "duration": 5600
+            }
+        ],
+        "cwd": "/home/lucian/Documents/uni/SD/Funding-Website",
+        "configFile": "playwright.config.js",
+        "playwright": "1.43.1",
+        "monocart": "2.4.6",
+        "testDir": "tests/e2e",
+        "outputFile": "playwright-coverage/report.html",
+        "outputDir": "playwright-coverage",
+        "timestampEnd": 1714682087361
+    },
+    "artifacts": [
+        {
+            "global": true,
+            "type": "coverage",
+            "name": "Coverage Report - My Test Report",
+            "path": "coverage/index.html"
+        }
+    ],
+    "trends": [],
+    "columns": [
+        {
+            "id": "caseType",
+            "name": "",
+            "width": 36,
+            "sortable": false,
+            "align": "center",
+            "formatter": "iconCaseType",
+            "detailed": false
+        },
+        {
+            "id": "title",
+            "name": "Title",
+            "searchable": true,
+            "width": 350,
+            "maxWidth": 1230,
+            "detailed": false
+        },
+        {
+            "id": "type",
+            "name": "Type",
+            "width": 50,
+            "sortable": false,
+            "align": "center",
+            "formatter": "iconType",
+            "detailed": false
+        },
+        {
+            "id": "duration",
+            "name": "Duration",
+            "align": "right",
+            "sortAsc": false,
+            "formatter": "duration",
+            "detailed": false
+        },
+        {
+            "id": "errors",
+            "name": "Errors",
+            "width": 60,
+            "align": "center",
+            "comparer": "errors",
+            "formatter": "errors",
+            "detailed": false
+        },
+        {
+            "id": "logs",
+            "name": "Logs",
+            "width": 60,
+            "align": "center",
+            "comparer": "logs",
+            "formatter": "logs",
+            "detailed": false
+        },
+        {
+            "id": "annotations",
+            "name": "Annotations",
+            "width": 100,
+            "markdown": true,
+            "searchable": true,
+            "comparer": "annotations",
+            "formatter": "annotations",
+            "detailed": false
+        },
+        {
+            "id": "attachments",
+            "name": "Attachments",
+            "width": 100,
+            "align": "center",
+            "formatter": "attachments",
+            "detailed": false
+        },
+        {
+            "id": "status",
+            "name": "Status",
+            "align": "center",
+            "detailed": false
+        },
+        {
+            "id": "expectedStatus",
+            "name": "Expected",
+            "align": "center",
+            "detailed": false
+        },
+        {
+            "id": "outcome",
+            "name": "Outcome",
+            "align": "center",
+            "width": 85,
+            "detailed": false
+        },
+        {
+            "id": "retry",
+            "name": "Retry",
+            "align": "center",
+            "width": 50,
+            "detailed": false
+        },
+        {
+            "id": "location",
+            "name": "Location",
+            "classMap": "mcr-location",
+            "width": 200,
+            "maxWidth": 1981,
+            "detailed": false
+        }
+    ],
+    "rows": [
+        {
+            "id": "dg1oq67bbzzt4q95llud",
+            "title": "chromium",
+            "type": "suite",
+            "suiteType": "project",
+            "caseNum": 1,
+            "subs": [
+                {
+                    "id": "badc1754af1944f68b2b",
+                    "title": "login.spec.js",
+                    "type": "suite",
+                    "suiteType": "file",
+                    "caseNum": 1,
+                    "subs": [
+                        {
+                            "id": "badc1754af1944f68b2b",
+                            "title": "Admin login",
+                            "type": "suite",
+                            "suiteType": "describe",
+                            "caseNum": 1,
+                            "subs": [
+                                {
+                                    "id": "e60263e564ff936bd4c9",
+                                    "title": "should login with valid credentials",
+                                    "type": "case",
+                                    "caseType": "failed",
+                                    "ok": false,
+                                    "outcome": "unexpected",
+                                    "expectedStatus": "passed",
+                                    "location": "tests/e2e/login.spec.js:5:9",
+                                    "timestamps": [
+                                        1714682080566,
+                                        1714682086166
+                                    ],
+                                    "duration": 5600,
+                                    "tags": [],
+                                    "timeout": 30000,
+                                    "retry": 0,
+                                    "status": "failed",
+                                    "stepNum": 24,
+                                    "stepFailed": 1,
+                                    "stepSubs": true,
+                                    "subs": [
+                                        {
+                                            "id": "azk2wewp3th06a0ulfxx",
+                                            "title": "Before Hooks",
+                                            "type": "step",
+                                            "stepType": "hook",
+                                            "duration": 209,
+                                            "location": "",
+                                            "subs": [
+                                                {
+                                                    "id": "dh7ocvbku79cnkgspmfm",
+                                                    "title": "fixture: browser",
+                                                    "type": "step",
+                                                    "stepType": "fixture",
+                                                    "duration": 106,
+                                                    "location": "",
+                                                    "subs": [
+                                                        {
+                                                            "id": "7n043wu76rqc7t2wdtnn",
+                                                            "title": "browserType.launch",
+                                                            "type": "step",
+                                                            "stepType": "pw:api",
+                                                            "duration": 105,
+                                                            "location": ""
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": "y58ox4tbp873fodsp68r",
+                                                    "title": "fixture: context",
+                                                    "type": "step",
+                                                    "stepType": "fixture",
+                                                    "duration": 15,
+                                                    "location": "",
+                                                    "subs": [
+                                                        {
+                                                            "id": "2ce3a29xirrc1rv542z8",
+                                                            "title": "browser.newContext",
+                                                            "type": "step",
+                                                            "stepType": "pw:api",
+                                                            "duration": 6,
+                                                            "location": ""
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": "e0v1cso1b5osvj2l1tge",
+                                                    "title": "fixture: page",
+                                                    "type": "step",
+                                                    "stepType": "fixture",
+                                                    "duration": 60,
+                                                    "location": "",
+                                                    "subs": [
+                                                        {
+                                                            "id": "kut04a02zb488dhhdvfk",
+                                                            "title": "browserContext.newPage",
+                                                            "type": "step",
+                                                            "stepType": "pw:api",
+                                                            "duration": 59,
+                                                            "location": ""
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": "419n73ktu4p3hbhw4phh",
+                                                    "title": "fixture: codeCoverageAutoTestFixture",
+                                                    "type": "step",
+                                                    "stepType": "fixture",
+                                                    "duration": 19,
+                                                    "location": "tests/e2e/_shared/app-fixtures.ts:18:30",
+                                                    "subs": [
+                                                        {
+                                                            "id": "hupb1gl20o5oo71jtjht",
+                                                            "title": "coverage.startJSCoverage",
+                                                            "type": "step",
+                                                            "stepType": "pw:api",
+                                                            "duration": 16,
+                                                            "location": "tests/e2e/_shared/fixtures/v8-code-coverage.ts:37:50",
+                                                            "subs": [
+                                                                {
+                                                                    "id": "hv3fq8m837kcd2x1n0ui",
+                                                                    "title": "coverage.startCSSCoverage",
+                                                                    "type": "step",
+                                                                    "stepType": "pw:api",
+                                                                    "duration": 10,
+                                                                    "location": "tests/e2e/_shared/fixtures/v8-code-coverage.ts:43:51"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "xscgu60rsgb8cizfgsvs",
+                                            "title": "page.goto(login.html)",
+                                            "type": "step",
+                                            "stepType": "pw:api",
+                                            "duration": 74,
+                                            "location": "tests/e2e/login.spec.js:6:20"
+                                        },
+                                        {
+                                            "id": "vuvtx2dx450kzk0oaajf",
+                                            "title": "page.fill(#email_input)",
+                                            "type": "step",
+                                            "stepType": "pw:api",
+                                            "duration": 43,
+                                            "location": "tests/e2e/login.spec.js:7:20"
+                                        },
+                                        {
+                                            "id": "4y6hpleoiqujnsdcfiw7",
+                                            "title": "page.fill(#password_input)",
+                                            "type": "step",
+                                            "stepType": "pw:api",
+                                            "duration": 17,
+                                            "location": "tests/e2e/login.spec.js:8:20"
+                                        },
+                                        {
+                                            "id": "1iyn6gpaots3hmad7zy9",
+                                            "title": "page.click(#submit_button)",
+                                            "type": "step",
+                                            "stepType": "pw:api",
+                                            "duration": 64,
+                                            "location": "tests/e2e/login.spec.js:9:20"
+                                        },
+                                        {
+                                            "id": "42cye0k8ob6e7k66zc2s",
+                                            "title": "expect.toHaveURL",
+                                            "type": "step",
+                                            "stepType": "expect",
+                                            "duration": 5016,
+                                            "location": "tests/e2e/login.spec.js:10:28",
+                                            "errors": [
+                                                "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected string: \u001b[32m\"http://localhost:3000/\u001b[7mhome\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"http://localhost:3000/\u001b[7mlogin.html\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://localhost:3000/login.html\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://localhost:3000/login.html\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://localhost:3000/login.html\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://localhost:3000/login.html\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://localhost:3000/login.html\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://localhost:3000/login.html\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://localhost:3000/login.html\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://localhost:3000/login.html\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://localhost:3000/login.html\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  8 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#password_input'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m\"admin123\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'#submit_button'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m         \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m\"home\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\n    at /home/lucian/Documents/uni/SD/Funding-Website/tests/e2e/login.spec.js:10:28"
+                                            ],
+                                            "errorNum": 1
+                                        },
+                                        {
+                                            "id": "ehelmqxvkeru0k701mbl",
+                                            "title": "After Hooks",
+                                            "type": "step",
+                                            "stepType": "hook",
+                                            "duration": 96,
+                                            "location": "",
+                                            "subs": [
+                                                {
+                                                    "id": "w69xq9m4z4lzncx39mg1",
+                                                    "title": "fixture: codeCoverageAutoTestFixture",
+                                                    "type": "step",
+                                                    "stepType": "fixture",
+                                                    "duration": 39,
+                                                    "location": "tests/e2e/_shared/app-fixtures.ts:18:30",
+                                                    "subs": [
+                                                        {
+                                                            "id": "96f5ctax8rm19w435m4e",
+                                                            "title": "coverage.stopJSCoverage",
+                                                            "type": "step",
+                                                            "stepType": "pw:api",
+                                                            "duration": 22,
+                                                            "location": "tests/e2e/_shared/fixtures/v8-code-coverage.ts:54:49",
+                                                            "subs": [
+                                                                {
+                                                                    "id": "04u020zomnkjr80nx7m4",
+                                                                    "title": "coverage.stopCSSCoverage",
+                                                                    "type": "step",
+                                                                    "stepType": "pw:api",
+                                                                    "duration": 21,
+                                                                    "location": "tests/e2e/_shared/fixtures/v8-code-coverage.ts:58:50"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": "i29fmdaumoy8iwb9sw3p",
+                                                    "title": "fixture: page",
+                                                    "type": "step",
+                                                    "stepType": "fixture",
+                                                    "duration": 1,
+                                                    "location": ""
+                                                },
+                                                {
+                                                    "id": "rd5r0yyo6yrc471ty6le",
+                                                    "title": "fixture: context",
+                                                    "type": "step",
+                                                    "stepType": "fixture",
+                                                    "duration": 0,
+                                                    "location": ""
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "mpck027gjanqx4brs3r7",
+                                            "title": "Worker Cleanup",
+                                            "type": "step",
+                                            "stepType": "hook",
+                                            "duration": 27,
+                                            "location": "",
+                                            "subs": [
+                                                {
+                                                    "id": "tmu21tih06soh13w93up",
+                                                    "title": "fixture: browser",
+                                                    "type": "step",
+                                                    "stepType": "fixture",
+                                                    "duration": 25,
+                                                    "location": ""
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "t85geidpsqslkekaxfoj",
+                                            "title": "attach \"trace\"",
+                                            "type": "step",
+                                            "stepType": "attach",
+                                            "duration": 1,
+                                            "location": ""
+                                        }
+                                    ],
+                                    "attachments": [
+                                        {
+                                            "name": "trace",
+                                            "path": "../test-results/login-Admin-login-should-login-with-valid-credentials-chromium/trace.zip",
+                                            "contentType": "application/zip",
+                                            "retry": 0
+                                        }
+                                    ],
+                                    "errorNum": 1,
+                                    "errorId": "42cye0k8ob6e7k66zc2s"
+                                }
+                            ],
+                            "location": "tests/e2e/login.spec.js:4:6"
+                        }
+                    ],
+                    "location": "tests/e2e/login.spec.js:0:0"
+                }
+            ]
+        }
+    ],
+    "formatters": {},
+    "suiteTypes": [
+        "project",
+        "file",
+        "describe",
+        "shard"
+    ],
+    "caseTypes": [
+        "passed",
+        "flaky",
+        "skipped",
+        "failed"
+    ],
+    "traceViewerUrl": "https://trace.playwright.dev/?trace={traceUrl}",
+    "mermaid": null,
+    "tags": {},
+    "summary": {
+        "tests": {
+            "name": "Tests",
+            "value": 1,
+            "nav": true,
+            "id": "tests"
+        },
+        "passed": {
+            "name": "Passed",
+            "value": 0,
+            "color": "green",
+            "nav": true,
+            "id": "passed",
+            "percent": "0.0%"
+        },
+        "flaky": {
+            "name": "Flaky",
+            "value": 0,
+            "color": "orange",
+            "nav": true,
+            "id": "flaky",
+            "percent": "0.0%"
+        },
+        "skipped": {
+            "name": "Skipped",
+            "value": 0,
+            "color": "gray",
+            "nav": true,
+            "id": "skipped",
+            "percent": "0.0%"
+        },
+        "failed": {
+            "name": "Failed",
+            "value": 1,
+            "color": "#d00",
+            "nav": true,
+            "id": "failed",
+            "percent": "100.0%"
+        },
+        "steps": {
+            "name": "Steps",
+            "value": 24,
+            "id": "steps"
+        },
+        "suites": {
+            "name": "Suites",
+            "value": 1,
+            "id": "suites"
+        },
+        "projects": {
+            "name": "Projects",
+            "description": "Suite type is project",
+            "value": 1,
+            "id": "projects"
+        },
+        "files": {
+            "name": "Files",
+            "description": "Suite type is file",
+            "value": 1,
+            "id": "files"
+        },
+        "describes": {
+            "name": "Describes",
+            "description": "Suite type is describe",
+            "value": 1,
+            "id": "describes"
+        },
+        "shards": {
+            "name": "Shards",
+            "description": "Suite type is shard (only in shading mode)",
+            "value": 0,
+            "id": "shards"
+        },
+        "retries": {
+            "name": "Retries",
+            "value": 0,
+            "id": "retries"
+        },
+        "errors": {
+            "name": "Errors",
+            "value": 1,
+            "id": "errors"
+        },
+        "logs": {
+            "name": "Logs",
+            "value": 0,
+            "id": "logs"
+        },
+        "attachments": {
+            "name": "Attachments",
+            "value": 1,
+            "id": "attachments"
+        },
+        "artifacts": {
+            "name": "Artifacts",
+            "value": 1
+        }
+    },
+    "pieChart": {
+        "ns": "mcr-pie",
+        "width": 360,
+        "height": 150,
+        "margin": 10,
+        "svg": "<svg viewBox=\"0 0 360 150\" width=\"100%\" height=\"100%\" xmlns=\"http://www.w3.org/2000/svg\"><g class=\"mcr-pie-path-passed\"><path d=\"\" fill=\"green\" opacity=\"0.8\" /><animateTransform from=\"0,0\" to=\"0,0\" pos=\"0,-10\" attributeName=\"transform\" type=\"translate\" dur=\"0.2s\" fill=\"freeze\" repeatCount=\"1\" restart=\"always\" /></g><g class=\"mcr-pie-path-flaky\"><path d=\"\" fill=\"orange\" opacity=\"0.8\" /><animateTransform from=\"0,0\" to=\"0,0\" pos=\"0,-10\" attributeName=\"transform\" type=\"translate\" dur=\"0.2s\" fill=\"freeze\" repeatCount=\"1\" restart=\"always\" /></g><g class=\"mcr-pie-path-skipped\"><path d=\"\" fill=\"gray\" opacity=\"0.8\" /><animateTransform from=\"0,0\" to=\"0,0\" pos=\"0,-10\" attributeName=\"transform\" type=\"translate\" dur=\"0.2s\" fill=\"freeze\" repeatCount=\"1\" restart=\"always\" /></g><g class=\"mcr-pie-path-failed\"><path d=\"M75,75 L75,10 A65,65 0 1 1 75,140 A65,65 0 1 1 75,10 z\" fill=\"#d00\" opacity=\"0.8\" /><animateTransform from=\"0,0\" to=\"0,0\" pos=\"0,10\" attributeName=\"transform\" type=\"translate\" dur=\"0.2s\" fill=\"freeze\" repeatCount=\"1\" restart=\"always\" /></g><g transform=\"translate(160 10)\"><g class=\"mcr-pie-legend-passed\" transform=\"translate(0 0)\"><circle cx=\"10\" cy=\"16\" r=\"10\" fill=\"green\" opacity=\"0.8\" /><text x=\"30\" y=\"16\" alignment-baseline=\"middle\">Passed</text><text x=\"115\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"middle\">0</text><text x=\"190\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"end\">0.0%</text></g><g class=\"mcr-pie-legend-flaky\" transform=\"translate(0 32)\"><circle cx=\"10\" cy=\"16\" r=\"10\" fill=\"orange\" opacity=\"0.8\" /><text x=\"30\" y=\"16\" alignment-baseline=\"middle\">Flaky</text><text x=\"115\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"middle\">0</text><text x=\"190\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"end\">0.0%</text></g><g class=\"mcr-pie-legend-skipped\" transform=\"translate(0 64)\"><circle cx=\"10\" cy=\"16\" r=\"10\" fill=\"gray\" opacity=\"0.8\" /><text x=\"30\" y=\"16\" alignment-baseline=\"middle\">Skipped</text><text x=\"115\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"middle\">0</text><text x=\"190\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"end\">0.0%</text></g><g class=\"mcr-pie-legend-failed\" transform=\"translate(0 96)\"><circle cx=\"10\" cy=\"16\" r=\"10\" fill=\"#d00\" opacity=\"0.8\" /><text x=\"30\" y=\"16\" alignment-baseline=\"middle\">Failed</text><text x=\"115\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"middle\">1</text><text x=\"190\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"end\">100.0%</text></g></g></svg>"
+    }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "funding-website",
+  "version": "1.0.0",
+  "description": "HexaFund",
+  "main": "app.js",
+  "scripts": {
+    "jest": "jest --verbose ./tests/jest-tests",
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "deploy": "git init && git add . && git commit ",
+    "playwright-server": "node playwright-local-server.js",
+    "playwright": "npx playwright test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/storage-blob": "^12.23.0-alpha.20240507.1",
+    "axios": "^1.6.8",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
+    "cypress": "^13.8.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.2",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "@istanbuljs/nyc-config-babel": "^3.0.0",
+    "@playwright/test": "^1.43.1",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.7",
+    "babel-plugin-istanbul": "^6.1.1",
+    "jest": "^29.7.0",
+    "jest-html-reporter": "^3.10.2",
+    "monocart-reporter": "^2.4.6",
+    "nodemon": "^3.1.0",
+    "playwright": "^1.43.1"
+  }
+}
