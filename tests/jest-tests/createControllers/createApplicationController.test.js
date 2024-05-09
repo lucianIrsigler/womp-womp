@@ -59,12 +59,12 @@ describe("Testing the createApplication controller", () => {
 
     await createApplication(req, res);
 
-    /*expect(res.status).toHaveBeenCalledWith(409);
+    expect(res.status).toHaveBeenCalledWith(409);
     expect(res.json).toHaveBeenCalledWith({
       message: "This application by: 'test@example.com' already exists",
       status: 409,
       error: "Application.findOne(...).exec is not a function"
-    });*/
+    });
   });
 
   it("should create a new application and return a 201 status code", async () => {
@@ -87,7 +87,7 @@ describe("Testing the createApplication controller", () => {
 
     await createApplication(req, res);
 
-    /*expect(Application.create).toHaveBeenCalledWith({
+    expect(Application.create).toHaveBeenCalledWith({
       applicant_email: "test@example.com",
       funding_opportunity_id: "123",
       reason: "test reason",
@@ -95,11 +95,11 @@ describe("Testing the createApplication controller", () => {
       cv_data: "cv data",
       application_form_data: "application form data",
     });
-    */
-    /*expect(res.status).toHaveBeenCalledWith(201);
+    
+    expect(res.status).toHaveBeenCalledWith(201);
     expect(res.json).toHaveBeenCalledWith({
       message: "Application successfully submitted.",
       status: 201,
-    });*/
+    });
   });
 });
