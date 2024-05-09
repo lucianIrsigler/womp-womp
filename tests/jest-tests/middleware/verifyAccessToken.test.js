@@ -1,4 +1,5 @@
 const verifyAccessToken = require("../../../middleware/verifyAccessToken");
+const jwt = require("jsonwebtoken");
 
 describe("Testing the verifyAccessToken middleware", () => {
   let req, res, next;
