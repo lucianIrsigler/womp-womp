@@ -1,6 +1,6 @@
 const { User } = require("../../../models");
 const jwt = require("jsonwebtoken");
-const refreshController = require("../controllers/refreshController");
+const refreshController = require("../../../controllers/refreshController");
 
 const res = {
   status: jest.fn(() => res),
