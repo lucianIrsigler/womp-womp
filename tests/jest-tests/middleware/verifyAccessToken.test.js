@@ -27,6 +27,18 @@ describe("Testing the verifyAccessToken middleware", () => {
     expect(next).not.toHaveBeenCalled();
   });
 
+  it("should return 401 if no authorization header and access token cookie is provided", async () => {
+    await verifyAccessToken(req, res, next);
+
+    expect(req.cookies).toEqual({});
+    expect(res.status).toHaveBeenCalledWith(401);
+    expect(res.json).toHaveBeenCalledWith({
+      message: "You are unauthorized to access this resource",
+      status: 401,
+    });
+    expect(next).not.toHaveBeenCalled();
+  });
+
   it("should return 403 if authorization header is provided but does not start with 'Bearer'", async () => {
     req.headers.Authorization = "InvalidToken";
     await verifyAccessToken(req, res, next);
@@ -37,6 +49,14 @@ describe("Testing the verifyAccessToken middleware", () => {
       status: 403,
     });
     expect(next).not.toHaveBeenCalled();
+  });
+
+  it("Checking if access token splits if authToken defined", async () => {
+    const accessToken = "validAccessToken";
+    req.headers.Authorization = `Bearer ${accessToken}`;
+
+    await verifyAccessToken(req, res, next);
+
   });
 
   it("should verify the access token and call next if it is valid", async () => {
@@ -143,4 +163,33 @@ describe("Testing the verifyAccessToken middleware", () => {
     });
     expect(next).not.toHaveBeenCalled();
   });*/
+
+  it("should extract the token from the Authorization header", async () => {
+    const accessToken = "validAccessToken";
+    req.headers.Authorization = `Bearer ${accessToken}`;
+
+    jwt.verify = jest.fn((token, secret, callback) => {
+      callback(null, { userInfo: { id: 1, username: "testuser" } });
+    });
+
+    await verifyAccessToken(req, res, next);
+
+    expect(req.userInfo).toEqual({ id: 1, username: "testuser" });
+    expect(next).toHaveBeenCalled();
+  });
+
+  it("should extract the token from the accessToken cookie if Authorization header is not present", async () => {
+    const accessToken = "validAccessToken";
+    req.cookies.accessToken = accessToken;
+
+    jwt.verify = jest.fn((token, secret, callback) => {
+      callback(null, { userInfo: { id: 1, username: "testuser" } });
+    });
+
+    await verifyAccessToken(req, res, next);
+
+    expect(req.userInfo).toEqual({ id: 1, username: "testuser" });
+    expect(next).toHaveBeenCalled();
+  });
+
 });
