@@ -7,6 +7,24 @@ describe("Testing the refresh controller", () => {
     jest.clearAllMocks();
   });
 
+  it("should return status 401 if cookies object is missing", async () => {
+    const req = {
+      cookies: null
+    };
+    const res = {
+      status: jest.fn(() => res),
+      json: jest.fn()
+    };
+
+    await refreshController(req, res);
+
+    expect(res.status).toHaveBeenCalledWith(401);
+    expect(res.json).toHaveBeenCalledWith({
+      message: "You are unauthorized from accessing this resource",
+      status: 401
+    });
+  });
+
   it("should return status 401 if refresh token is missing", async () => {
     const req = {
       cookies: {}
