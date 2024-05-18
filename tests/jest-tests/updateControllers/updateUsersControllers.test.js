@@ -58,16 +58,14 @@ describe("Testing the updateFundingManagers function", () => {
     expect(res.json).toHaveBeenCalledWith({ message: "Please include a body of the properties you want to modify", status: 400 });
   });
 
-  /*it("should update the funding manager and user with the provided body", async () => {
-    const req = { params: { email: "fund@gmail.com" }, body: { account_details: { balance: 200 } } };
-
-    FundingManager.findOne = jest.fn().mockResolvedValue({ account_details: { balance: 100 } });
+  it("should update the funding manager and user with the provided body", async () => {
+    const req = { params: { email: "fund@gmail.com" }, body: { name: "test" } };
+    FundingManager.findOne = jest.fn().mockResolvedValue({ email: "fund@gmail.com"});
 
     await updateFundingManagers(req, res);
 
-    expect(FundingManager.updateOne).toHaveBeenCalledWith({ email: "example@gmail.com" }, { $set: { account_details: { balance: 200 } } });
-    expect(User.updateOne).toHaveBeenCalledWith({ email: "example@gmail.com" }, { $set: { account_details: { balance: 200 } } });
+    expect(FundingManager.updateOne).toHaveBeenCalledWith(req.params, { $set: req.body });
     expect(res.status).toHaveBeenCalledWith(200);
     expect(res.json).toHaveBeenCalledWith({ message: "successfully updated", success: true, data: { account_details: { balance: 200 } } });
-  });*/
+});
 });

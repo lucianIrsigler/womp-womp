@@ -2,7 +2,6 @@ const { asyncWrapper } = require("../../middleware");
 const { User, Applicant, FundingManager } = require("../../models");
 
 const updateApplicants = asyncWrapper(async (req, res) => {
-
     const { email } = req.params;
     let body = req.body;
 
