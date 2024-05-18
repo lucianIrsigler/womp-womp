@@ -29,7 +29,6 @@ describe("Testing the verifyAccessToken middleware", () => {
 
   it("should return 403 if authorization header is provided but does not start with 'Bearer'", async () => {
     req.headers.Authorization = "InvalidToken";
-
     await verifyAccessToken(req, res, next);
 
     expect(res.status).toHaveBeenCalledWith(403);
@@ -82,4 +81,66 @@ describe("Testing the verifyAccessToken middleware", () => {
     });
     expect(next).not.toHaveBeenCalled();
   });
+
+  it("should return 401 if authorization header is provided but access token is missing", async () => {
+    req.headers.Authorization = "Bearer";
+
+    await verifyAccessToken(req, res, next);
+
+    expect(res.status).toHaveBeenCalledWith(403);
+    expect(res.json).toHaveBeenCalledWith({
+      message: "You are forbidden from accessing this resource",
+      status: 403,
+    });
+    expect(next).not.toHaveBeenCalled();
+  });
+
+  it("should return 403 if access token is provided but is empty", async () => {
+    req.headers.Authorization = "Bearer ";
+
+    await verifyAccessToken(req, res, next);
+
+    expect(res.status).toHaveBeenCalledWith(403);
+    expect(res.json).toHaveBeenCalledWith({
+      message: "You are forbidden from accessing this resource",
+      status: 403,
+    });
+    expect(next).not.toHaveBeenCalled();
+  });
+
+  it("should return 403 if access token is provided but is not a valid JWT", async () => {
+    req.headers.Authorization = "Bearer invalidToken";
+
+    await verifyAccessToken(req, res, next);
+
+    expect(res.status).toHaveBeenCalledWith(403);
+    expect(res.json).toHaveBeenCalledWith({
+      message: "You are forbidden from accessing this resource",
+      status: 403,
+    });
+    expect(next).not.toHaveBeenCalled();
+  });
+
+  /*it("should return 403 if access token is valid but does not contain userInfo", async () => {
+    const accessToken = "validAccessToken";
+    req.headers.Authorization = `Bearer ${accessToken}`;
+
+    const verifyMock = jest.spyOn(jwt, "verify").mockImplementation((token, secret, callback) => {
+      callback(null, {});
+    });
+
+    await verifyAccessToken(req, res, next);
+
+    expect(verifyMock).toHaveBeenCalledWith(
+      accessToken,
+      process.env.ACCESS_TOKEN_SECRET,
+      expect.any(Function)
+    );
+    expect(res.status).toHaveBeenCalledWith(403);
+    expect(res.json).toHaveBeenCalledWith({
+      message: "You are forbidden from accessing this resource",
+      status: 403,
+    });
+    expect(next).not.toHaveBeenCalled();
+  });*/
 });
