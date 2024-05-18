@@ -72,6 +72,7 @@ const getApplications = async (req, res) => {
 
 };
 
+/*
 const convertBase64ToPDF = (base64String) => {
     // Check if the base64 string is valid (optional)
     const isBase64 = /^[A-Za-z0-9+\/]+=*$/i.test(base64String);
@@ -93,7 +94,7 @@ const convertBase64ToPDF = (base64String) => {
     };
 
     return response;
-}
+}*/
 
 
 module.exports =  getApplications;
