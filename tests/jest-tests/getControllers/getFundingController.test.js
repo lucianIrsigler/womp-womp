@@ -58,18 +58,39 @@ describe("Testing getFundingController", () => {
       json: jest.fn(),
     };
 
-    FundingOpportunity.find.mockResolvedValueOnce([
+    const mockFundingOpportunities = [
       { nestedProperty: { nestedKey: "nestedValue" }, otherProperty: "otherValue" },
       { nestedProperty: { nestedKey: "nestedValue" }, otherProperty: "anotherValue" },
-    ]);
+    ];
+
+    FundingOpportunity.find.mockResolvedValueOnce(mockFundingOpportunities);
 
     await asyncWrapper(getFundingController)(req, res);
 
     expect(FundingOpportunity.find).toHaveBeenCalledWith({});
     expect(res.status).toHaveBeenCalledWith(200);
-    expect(res.json).toHaveBeenCalledWith([
+    expect(res.json).toHaveBeenCalledWith(mockFundingOpportunities);
+  });
+  
+  // New test case for filtering nested properties
+  it("should filter funding opportunities based on nested query parameters", async () => {
+    const req = { query: { "nestedProperty.nestedKey": "nestedValue" } };
+    const res = {
+      status: jest.fn().mockReturnThis(),
+      json: jest.fn(),
+    };
+
+    const mockFundingOpportunities = [
       { nestedProperty: { nestedKey: "nestedValue" }, otherProperty: "otherValue" },
       { nestedProperty: { nestedKey: "nestedValue" }, otherProperty: "anotherValue" },
-    ]);
+    ];
+
+    FundingOpportunity.find.mockResolvedValueOnce(mockFundingOpportunities);
+
+    await asyncWrapper(getFundingController)(req, res);
+
+    expect(FundingOpportunity.find).toHaveBeenCalledWith({});
+    expect(res.status).toHaveBeenCalledWith(200);
+    expect(res.json).toHaveBeenCalledWith(mockFundingOpportunities);
   });
 });
