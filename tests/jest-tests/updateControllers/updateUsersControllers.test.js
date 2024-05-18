@@ -1,5 +1,20 @@
 const { updateFundingManagers } = require("../../../controllers/updateControllers/updateUsersController");
 
+// Mocking FundingManager and User modules
+jest.mock("../../../controllers/updateControllers/updateUsersController", () => {
+  const originalModule = jest.requireActual("../../../controllers/updateControllers/updateUsersController");
+  return {
+    ...originalModule,
+    FundingManager: {
+      findOne: jest.fn().mockResolvedValue({ account_details: { balance: 100 } }),
+      updateOne: jest.fn(),
+    },
+    User: {
+      updateOne: jest.fn(),
+    },
+  };
+});
+
 describe("Testing the updateFundingManagers function", () => {
   it("should return a 400 status code and error message if email is not provided", async () => {
     const req = { params: {} };
@@ -28,26 +43,16 @@ describe("Testing the updateFundingManagers function", () => {
   });
 
   /*it("should update the funding manager and user with the provided body", async () => {
-    const req = { params: { email: "fund1@gmail.com" }, body: { name: "John Doe" } };
+    const req = { params: { email: "fund@gmail.com" }, body: { name: "John Doe" } };
     const res = {
       status: jest.fn(() => res),
       json: jest.fn()
     };
 
-    const findOneMock = jest.fn().mockResolvedValue({ account_details: { balance: 100 } });
-    const updateOneMock = jest.fn();
-
-    const FundingManager = { findOne: findOneMock, updateOne: updateOneMock };
-    const User = { updateOne: updateOneMock };
-
-    jest.mock("../../../controllers/updateControllers/updateUsersController", () => ({
-      FundingManager,
-      User
-    }));
-
     await updateFundingManagers(req, res);
 
-    expect(updateOneMock).toHaveBeenCalledWith({ email: "example@gmail.com" }, { $set: { name: "John Doe" } });
+    expect(FundingManager.updateOne).toHaveBeenCalledWith({ email: "example@gmail.com" }, { $set: { name: "John Doe" } });
+    expect(User.updateOne).toHaveBeenCalledWith({ email: "example@gmail.com" }, { $set: { name: "John Doe" } });
     expect(res.status).toHaveBeenCalledWith(200);
     expect(res.json).toHaveBeenCalledWith({ message: "successfully updated", success: true, data: { name: "John Doe" } });
   });*/
