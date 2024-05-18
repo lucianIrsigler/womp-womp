@@ -223,7 +223,7 @@ describe("Testing the register controller", () => {
                 name: "name",
                 email: "example@gmail.com",
                 password: "password123",
-                company: "company",
+                company: "company132321312",
                 role: "Funding Manager"
             }
         };
